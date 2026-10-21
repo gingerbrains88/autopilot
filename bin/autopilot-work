@@ -1,0 +1,9 @@
+#!/bin/sh
+# The Work port has its own entry point; never starts Claude or calls Linear.
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
+NODE="${AUTOPILOT_NODE:-node}"
+case "${1:-tick}" in
+  tick) exec "$NODE" "$DIR/runtime/work-tick.mjs" ;;
+  *) echo 'usage: autopilot-work [tick]' >&2; exit 1 ;;
+esac

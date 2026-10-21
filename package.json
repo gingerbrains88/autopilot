@@ -10,6 +10,8 @@
     "autopilot": "bin/autopilot"
   },
   "scripts": {
+    "work:tick": "node runtime/work-tick.mjs",
+    "work:test": "node --test tests/work-tick.test.mjs",
     "tick": "node runtime/tick.ts",
     "check": "tsc --noEmit --allowImportingTsExtensions --module nodenext --target es2024 --strict --types node runtime/*.ts",
     "setup": "node runtime/tick.ts setup"
