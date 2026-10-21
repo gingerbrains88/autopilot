@@ -39,10 +39,10 @@ claim work or change Asana statuses. Pending events are not completed work.
    duplicate event delivery, restart recovery, and project source access end to end.
 6. Port source scans, watchers, and nightly routing review after this loop is verified.
 
-Creating a Work chat inside an existing project was verified during setup. Availability
+Creating a Work chat inside an existing project and continuing that same chat were verified during setup. Availability
 of all project sources must be checked by the worker; do not assume the complete project
-history or every attachment is automatically available. Follow-up delivery and automatic
-event-triggered dispatch remain unverified.
+history or every attachment is automatically available. Automatic event-triggered dispatch
+from the local poller remains unverified.
 
 ## Local configuration
 

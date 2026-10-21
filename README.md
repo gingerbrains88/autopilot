@@ -1,5 +1,10 @@
 # Autopilot
 
+**ChatGPT Work + Asana migration:** this branch adds a direct-API Asana tick and a
+single-board workflow. The Work event bridge and automatic project routing are still
+in progress. See [the port status and setup](docs/work-asana-port.md). The original
+Claude/Linear implementation is documented below and uses a separate entry point.
+
 Autopilot reads your inbox, Slack, GitHub and Linear, files what needs you as Linear issues, and
 when you say go, starts a Claude Code session that prepares the work: a reply drafted in the
 thread, a document, a branch with a fix, a decision with the facts lined up. You decide; it never
