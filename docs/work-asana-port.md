@@ -19,7 +19,12 @@ claim work or change Asana statuses. Pending events are not completed work.
 
 ## Still required before autonomous operation
 
-1. Connect and verify a ChatGPT Work event bridge. The supported event mechanism is
+1. Resolve project orchestration availability before deploying an event bridge.
+   The tested ChatGPT Work Cloud chat has no tools to list ChatGPT projects, create
+   chats in another project, or send cross-chat follow-ups. Those operations were
+   verified from the authoring desktop chat only. Do not replace this requirement
+   with Codex execution, an API agent, or a fixed project mapping.
+   The supported event mechanism is
    [MCP Events](https://developers.openai.com/plugins/build/mcp-events): an authenticated,
    reachable MCP 2.0 server, a Work Cloud chat subscription, callback verification,
    persistent subscriptions, and signed webhook delivery. A shell process cannot call
@@ -42,7 +47,9 @@ claim work or change Asana statuses. Pending events are not completed work.
 Creating a Work chat inside an existing project and continuing that same chat were verified during setup. Availability
 of all project sources must be checked by the worker; do not assume the complete project
 history or every attachment is automatically available. Automatic event-triggered dispatch
-from the local poller remains unverified.
+from the local poller remains unverified. The hosted bridge source was scaffolded
+and built successfully, but deployment is paused: receiving an event cannot give
+the Cloud Work chat project-orchestration tools it does not have.
 
 ## Local configuration
 
